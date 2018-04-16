@@ -18,11 +18,11 @@ class AuthorsController < ApplicationController
   end
 
   def edit
-    @author = Post.find(params[:id])
+    @author = Author.find(params[:id])
   end
 
   def update
-    @author = Post.find(params[:id])
+    @author = Author.find(params[:id])
 
     if @author.update(post_params)
       redirect_to post_path(@author)
